@@ -43,7 +43,7 @@ bar_chart_fun<- function(name, title,palette){
       scale_fill_manual(values = palette)
 }
 
-#분야별 전체 확정 금액 파이차트 시각화
+#분야별 확정금액 파이차트 시각화
 ggplot(select_all, aes(x = "", y = perc, fill = 분야명)) +
         geom_col() +  
         geom_label(aes(label = labels),
@@ -62,7 +62,7 @@ ggplot(select_all, aes(x = "", y = perc, fill = 분야명)) +
        title = element_text(size=15, 
                                       face="bold"))
                                    
-#분야별 파이 차트 사용자 정의 함수
+#분야별 파이차트 사용자 정의 함수
 pie_chart_fun<- function(name, title, palette = "OrRd") {
     
     df<- data_select1 %>% filter(분야명 == name) %>%
